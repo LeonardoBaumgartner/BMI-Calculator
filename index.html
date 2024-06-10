@@ -13,6 +13,7 @@
 <body>
     <div class="container">
         <div class="hero">
+            <div class="card-azul"></div>
             <div class="logo">
                 <img src="./images/logo.svg" alt="logo da empresa">
             </div>
@@ -27,37 +28,39 @@
                     <h2 class="heading-m text-gunmetal">Enter your details below</h2>
                     <div class="metric-imperial">
                         <div class="radio-container">
-                            <input name="unidade" type="radio"><h3 class="body-m text-gunmetal">Metric</h3>
+                            <input id="unidade" name="unidade" type="radio">
+                            <label for="unidade" class="body-m text-gunmetal">Metric</label>
                         </div>
                         <div class="radio-container">
-                            <input name="unidade" type="radio"><h3 class="body-m text-gunmetal">Imperial</h3>
+                            <input id="unidade-imperial" name="unidade" type="radio">
+                            <label for="unidade-imperial" class="body-m text-gunmetal">Imperial</label>
                         </div>
                     </div>
+                    
                     <div class="height-weight">
-                        <p class="body-s">Height</p>
-                        <div class="container-height">
-                            <input class="input" type="number">
-                            <h3 class="heading-m text-blue">cm</h3>
+                        <div>
+                            <label for="input-height" class="body-s">Height</label>
+                            <div class="input-container">
+                                <input id="input-height" name="height" class="input heading-m text-gunmetal">
+                                <h3 class="heading-m text-blue">cm</h3>
+                            </div>
                         </div>
 
-                        
-                        <p class="body-s">Weight</p>
-
-                        <div class="container-weight"> 
-                            <div class="input-weight">
-                                <input class="input" type="number">
+                        <div>
+                            <label for="input-weight" class="body-s">Weight</label>
+                            <div class="input-container"> 
+                                <input id="input-weight" name="weight" class="input heading-m text-gunmetal">
+                                <h3 class="heading-m text-blue" for="kg">kg</h3>
                             </div>
-                            <label class="heading-m text-blue" for="kg">kg</label>
-                        <!-- <h3 class="heading-m text-blue">kg</h3> -->
                         </div>
 
                     </div>
                     <div class="your-bmi">
                         <div class="resultado-bmi">
-                        <p class="body-m text-white">Your BMI is...</p>
-                        <h2 class="heading-l text-white">23.4</h2>
+                            <p class="body-m text-white">Your BMI is...</p>
+                            <h2 class="heading-l text-white text-bmi-result">23.4</h2>
                         </div>
-                        <p class="body-s text-white text-your">Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.</p>
+                        <p class="body-s text-white text-your">Your BMI suggests you’re a healthy weight. Your ideal weight is between <span class="text-peso">63.3kgs - 85.2kgs.</span></p>
                     </div>
                 </div>
             </div>

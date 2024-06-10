@@ -92,7 +92,18 @@ body{
 }
 
 .hero{
-    background: linear-gradient(to top,  rgba(214, 230, 254, .60), rgba(214, 230, 254, .40));
+    position: relative;
+}
+
+.card-azul{
+    z-index: -1;
+    position: absolute;
+    top: -32px;
+    width: 100%;
+    height: 640px;
+    background: linear-gradient(to top,  rgba(214, 230, 254, .60), rgba(214, 230, 254, .40)); 
+    border-radius: 0px 0px 35px 35px;
+
 }
 
 .sobre-bmi{
@@ -116,27 +127,27 @@ body{
     border-radius: 16px;
     display: flex;
     flex-direction: column;
+    margin-top: 24px;
 }
 
-.text-your{
-    padding: 32px;
-}
 
 .resultado-bmi{
-    padding: 0px 32px 24px;
+    margin-bottom: 24px;
 }
 
-.container-height{
+.input-container{
     display: flex;
-}
-
-.container-weight{
-    display: flex;
+    border: 1px solid var(--dark);
+    border-radius: 12px;
+    padding: 20px 24px;
+    gap: 24px;
+    margin-top: 8px;
 }
 
 .metric-imperial{
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
+    padding-top: 24px;
 }
 
 .radio-container{
@@ -145,12 +156,18 @@ body{
     gap: 18px;
 }
 
-
 .input{
-    height: 69px;
-    width: 280px;
-    /* width: 100%; */
+    width: 100%;
     border-radius: 12px;
+    border: none;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.height-weight{
+    margin-top: 24px;
 }
 
 .foto-homem{
@@ -248,6 +265,11 @@ input[type=radio] {
     vertical-align: middle;
 }
 
+.text-peso{
+    font-weight: 700;
+    color: var(--purewhite)
+}
+
 @media screen and (min-width: 768px) {
     .hero,
     .sobre-resultado,
@@ -258,9 +280,18 @@ input[type=radio] {
         margin: 0% auto;
     }
  
+    .card-azul{
+        top: 12px;
+        left: -58px;
+        width: 978px;
+        height: 737px;
+        border-radius: 0px 0px 35px 35px;
+
+    }
 
     .hero{
         padding-top: 75px;
+        margin-bottom: 138px;
     }
 
     .logo{
@@ -269,6 +300,7 @@ input[type=radio] {
 
     .sobre-bmi-voce{
         display: flex;
+        align-items: center;
     }
 
     .sobre-bmi, .sobre-voce{
@@ -276,12 +308,30 @@ input[type=radio] {
     }
 
     .foto-homem{
+        
         max-width: 564px;
     }
 
+    .height-weight{
+        display: flex;
+        gap: 24px;
+    }
+
     .your-bmi{
-    border-radius: 16px 999px 999px 16px;
+        border-radius: 16px 999px 999px 16px;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
     }   
+
+    .text-your{
+        flex: 1;
+    }
+
+    .resultado-bmi{
+        flex: 1;
+        margin-bottom: 0px;
+    }
 
     .sobre-resultado{
         display: flex;
@@ -354,5 +404,12 @@ input[type=radio] {
         font-size: 48px;
         font-weight: 600;
         line-height: 110%;
+   }
+
+   .text-bmi-result{
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 110%;
+        margin-top: 8px;
    }
  }
