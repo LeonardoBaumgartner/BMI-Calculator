@@ -12,22 +12,55 @@
 </head>
 <body>
     <div class="container">
+        <div class="hero">
+            <div class="logo">
+                <img src="./images/logo.svg" alt="logo da empresa">
+            </div>
 
-        <div class="sobre-bmi">
-            <img class="logo" src="./images/logo.svg" alt="logo da empresa">
-            <h1 class="heading-l text-gunmetal titulo-bmi titulo">Body Mass Index Calculator</h1>
-            <p class="body-m text-dark descricao-bmi">Better understand you weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being</p> 
-        </div>
+            <div class="sobre-bmi-voce">
+                <div class="sobre-bmi">
+                    <h1 class="heading-l text-gunmetal titulo-bmi titulo">Body Mass Index Calculator</h1>
+                    <p class="body-m text-dark descricao-bmi">Better understand you weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being</p> 
+                </div>
 
-        <div class="sobre-voce">
-            <h2>Enter your details below</h2>
-            <input name="unidade" type="radio"> Metric
-            <input name="unidade" type="radio"> Imperial
-            <p>Height</p>
-            <input type="number"> cm
-            <p>Weight</p>
-            <input type="number"> kg
-            <p>Your BMI is...</p>
+                <div class="sobre-voce">
+                    <h2 class="heading-m text-gunmetal">Enter your details below</h2>
+                    <div class="metric-imperial">
+                        <div class="radio-container">
+                            <input name="unidade" type="radio"><h3 class="body-m text-gunmetal">Metric</h3>
+                        </div>
+                        <div class="radio-container">
+                            <input name="unidade" type="radio"><h3 class="body-m text-gunmetal">Imperial</h3>
+                        </div>
+                    </div>
+                    <div class="height-weight">
+                        <p class="body-s">Height</p>
+                        <div class="container-height">
+                            <input class="input" type="number">
+                            <h3 class="heading-m text-blue">cm</h3>
+                        </div>
+
+                        
+                        <p class="body-s">Weight</p>
+
+                        <div class="container-weight"> 
+                            <div class="input-weight">
+                                <input class="input" type="number">
+                            </div>
+                            <label class="heading-m text-blue" for="kg">kg</label>
+                        <!-- <h3 class="heading-m text-blue">kg</h3> -->
+                        </div>
+
+                    </div>
+                    <div class="your-bmi">
+                        <div class="resultado-bmi">
+                        <p class="body-m text-white">Your BMI is...</p>
+                        <h2 class="heading-l text-white">23.4</h2>
+                        </div>
+                        <p class="body-s text-white text-your">Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="sobre-resultado">
@@ -38,31 +71,35 @@
             </div>
         </div>
 
-        <div class="dicas">
-            <div>
-                <img src="./images/icon-eating.svg" alt="prato de comida">
-                <h3 class="heading-m text-gunmetal">Healthy eating</h3>
-                <p class="body-m text-dark text-comida">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
-            </div>
+        <div class="container-dicas"> 
+            <div class="dicas">
+                <div>
+                    <img src="./images/icon-eating.svg" alt="prato de comida">
+                    <h3 class="heading-m text-gunmetal">Healthy eating</h3>
+                    <p class="body-m text-dark text-comida">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+                </div>
 
-            <div>
-                <img src="./images/icon-exercise.svg" alt="halter">
-                <h3 class="heading-m text-gunmetal">Regular exercise</h3>
-                <p class="body-m text-dark">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
-            </div>
+                <div>
+                    <img src="./images/icon-exercise.svg" alt="halter">
+                    <h3 class="heading-m text-gunmetal">Regular exercise</h3>
+                    <p class="body-m text-dark">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+                </div>
 
-            <div>
-                <img src="./images/icon-sleep.svg" alt="lua minguante com estrela">
-                <h3 class="heading-m text-gunmetal">Adequate sleep</h3>
-                <p class="body-m text-dark">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+                <div>
+                    <img src="./images/icon-sleep.svg" alt="lua minguante com estrela">
+                    <h3 class="heading-m text-gunmetal">Adequate sleep</h3>
+                    <p class="body-m text-dark">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+                </div>
             </div>
         </div>
 
         <div class="limitacoes">
-            <h2 class="body-x text-gunmetal">Limitations of BMI</h2>
-            <p class="body-m text-dark">Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.</p>
+            <div class="titulo-texto-limitacoes">
+                <h2 class="body-x text-gunmetal titulo-limitations">Limitations of BMI</h2>
+                <p class="body-m text-dark">Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.</p>
+            </div>
 
-            <div class="card">
+            <div class="card card-gender">
                 <div class="img-titulo">
                     <img src="./images/icon-gender.svg" alt="simbolo gênero">
                     <h3 class="heading-s text-gunmetal">Gender</h3>
@@ -70,7 +107,7 @@
                 <p class="body-m text-dark">The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when       evaluating their BMI.</p>
             </div>
 
-            <div class="card">
+            <div class="card card-age">
                 <div class="img-titulo">
                     <img src="./images/icon-age.svg" alt="bolo de aniversário">
                     <h3 class="heading-s text-gunmetal">Age</h3>
@@ -78,7 +115,7 @@
                 <p class="body-m text-dark">In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
             </div>
 
-            <div class="card">
+            <div class="card card-muscle">
                 <div class="img-titulo">
                     <img src="./images/icon-muscle.svg" alt="braço mostrando músculo">
                     <h3 class="heading-s text-gunmetal">Muscle</h3>
@@ -86,7 +123,8 @@
                 <p class="body-m text-dark">BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
             </div>
 
-            <div class="card">
+
+            <div class="card card-pregnancy">
                 <div class="img-titulo">
                     <img src="./images/icon-pregnancy.svg" alt="rosto humano">
                     <h3 class="heading-s text-gunmetal">Pregnancy</h3>
@@ -94,7 +132,7 @@
                 <p class="body-m text-dark">Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
             </div>
 
-            <div class="card">
+            <div class="card card-race">
                 <div class="img-titulo">
                     <img src="./images/icon-race.svg" alt="esboço corpo humano">
                     <h3 class="heading-s text-gunmetal">Race</h3>

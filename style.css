@@ -87,9 +87,12 @@ body{
 }
 
 .container{
-    display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.hero{
+    background: linear-gradient(to top,  rgba(214, 230, 254, .60), rgba(214, 230, 254, .40));
 }
 
 .sobre-bmi{
@@ -100,12 +103,64 @@ body{
     padding: 0px 20px;
 }
 
+.sobre-voce{
+    padding: 24px;
+    background-color: var(--purewhite);
+    margin: 0px 23px;
+    border-radius: 16px;
+}
+
+.your-bmi{
+    padding: 32px;
+    background-color: var(--blue);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-your{
+    padding: 32px;
+}
+
+.resultado-bmi{
+    padding: 0px 32px 24px;
+}
+
+.container-height{
+    display: flex;
+}
+
+.container-weight{
+    display: flex;
+}
+
+.metric-imperial{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.radio-container{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.input{
+    height: 69px;
+    width: 280px;
+    /* width: 100%; */
+    border-radius: 12px;
+}
+
 .foto-homem{
     max-width: 768px;
-    margin-top: 72px;
     display: block;
-    width: 100%;
-    
+    width: 100%; 
+}
+
+.sobre-resultado{
+    padding-top: 72px;
 }
 
 .titulo-sobre-resultado{
@@ -144,6 +199,9 @@ body{
 
 .logo{
     margin-top: 32px;
+    display: flex;
+    justify-content: center;
+
 }
 
 .titulo {
@@ -167,7 +225,6 @@ body{
 }
 
 .limitacoes{
-    background: linear-gradient(to top, #D6E6FE, #D6FCFE30);
     padding: 72px 20px 96px;
 }
 
@@ -184,9 +241,118 @@ body{
     padding: 0px 20px;
 }
 
+input[type=radio] {
+    border: 0px;
+    width: 31px;
+    height: 31px;
+    vertical-align: middle;
+}
+
 @media screen and (min-width: 768px) {
-    body {
-        background-color: red;
+    .hero,
+    .sobre-resultado,
+    .dicas,
+    .limitacoes{
+        max-width: 1192px;
+        width: 100%;
+        margin: 0% auto;
+    }
+ 
+
+    .hero{
+        padding-top: 75px;
+    }
+
+    .logo{
+        justify-content: flex-start;
+    }
+
+    .sobre-bmi-voce{
+        display: flex;
+    }
+
+    .sobre-bmi, .sobre-voce{
+        flex: 1;
+    }
+
+    .foto-homem{
+        max-width: 564px;
+    }
+
+    .your-bmi{
+    border-radius: 16px 999px 999px 16px;
+    }   
+
+    .sobre-resultado{
+        display: flex;
+        align-items: center;
+        padding-top: 65px;
+        gap: 131px;
+    }
+
+    .titulo-sobre-resultado{
+        margin-top: 0px;
+    }
+
+    .container-dicas{
+        background: linear-gradient(to top,  rgba(214, 230, 254, .60), rgba(214, 230, 254, .40));
+        padding: 72px 0px 96px;
+        margin: 96px 24px 0px;
+
+    }
+
+    .dicas{
+        background: initial;
+        display: flex;
+        border-radius: 35px;
+        padding: 0px;
+        gap: 32px;
+    }
+
+    .limitacoes{  
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(12, 1fr);
+        column-gap: 32px;
+        row-gap: 32px;
+    }
+
+    .titulo-texto-limitacoes{
+        grid-area: 1 / 1 / 1 / 7;
+    }
+
+    .card-gender{
+        grid-area: 1 / 8 / 1 / 12;
+    }
+
+    .card-age{
+        grid-area: 2 / 5 / 2 / 9;
+    }
+
+    .card-muscle{
+        grid-area: 2 / 9 / 2 / 13;
+    }
+
+    .card-pregnancy{
+        grid-area: 3 / 3 / 3 / 7;
+    }
+
+    .card-race{
+        grid-area: 3 / 7 / 3 / 11;
     }
     
-}
+    .card{
+        margin: 0px;
+    }
+
+    .titulo-bmi{
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 110%;
+    }
+
+   .titulo-sobre-resultado .titulo-limitations{
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 110%;
+   }
+ }
