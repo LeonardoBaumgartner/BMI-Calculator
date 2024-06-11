@@ -270,6 +270,10 @@ input[type=radio] {
     color: var(--purewhite)
 }
 
+.arco-esquerda{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .hero,
     .sobre-resultado,
@@ -307,9 +311,24 @@ input[type=radio] {
         flex: 1;
     }
 
+    .descricao-bmi{
+        padding-right: 70px;
+    }
+
+    .titulo-bmi{
+        padding-right: 20px;
+    }
+
+    .descricao-bmi, .titulo-bmi{
+        text-align: start;
+    }
+
     .foto-homem{
-        
         max-width: 564px;
+    }
+
+    .homem-container, .resultado-descricao-container{
+        flex: 1;
     }
 
     .height-weight{
