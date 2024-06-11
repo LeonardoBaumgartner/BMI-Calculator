@@ -338,10 +338,18 @@ input[type=radio] {
         align-items: center;
         padding-top: 65px;
         gap: 131px;
+        position: relative;
     }
 
     .titulo-sobre-resultado{
-        margin-top: 0px;
+        margin-top: 0px;    
+    }
+
+    .arco-esquerda{
+        position: absolute;
+        right: 27px;
+        top: 0px;
+
     }
 
     .container-dicas{
